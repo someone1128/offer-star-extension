@@ -55,4 +55,4 @@ Firefox 真实登录页面只做用户控制下的手工验证；`npm run test:f
 
 ## 继续工作入口
 
-先阅读 [CLAUDE.md](CLAUDE.md)、[开发与验收计划](docs/DEVELOPMENT_AND_TEST_PLAN.md)、[真实站点回归矩阵](docs/SITE_REGRESSION_MATRIX.md) 和 [登录清单](docs/LOGIN_REQUIRED_SITE_CHECKLIST.md)，再按 `CLAUDE.md` 的 P0/P1/P2 顺序推进。
+先阅读 [CLAUDE.md](CLAUDE.md) 了解项目上下文，再阅读 [后续工作与交接清单](docs/NEXT_WORK.md) 获取当前任务顺序，最后按 [开发与验收计划](docs/DEVELOPMENT_AND_TEST_PLAN.md) 执行验收。
