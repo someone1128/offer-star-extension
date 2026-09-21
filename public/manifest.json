@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Offer Star 简历助手",
+  "version": "0.1.0",
+  "description": "使用 Offer Star 简历辅助填写招聘网站表单",
+  "action": { "default_title": "打开 Offer Star 简历助手" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://api.gfjianli.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

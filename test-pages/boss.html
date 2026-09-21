@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>BOSS 直聘脱敏网申夹具</title>
+    <style>
+      body { max-width: 760px; margin: 40px auto; font: 16px system-ui; }
+      .field { margin: 18px 0; position: relative; }
+      .label { display: block; margin-bottom: 6px; }
+      input, button { width: 100%; box-sizing: border-box; padding: 10px; }
+      [role=listbox] { position: absolute; left: 0; right: 0; top: 68px; border: 1px solid #d0d5dd; background: #fff; z-index: 2; }
+      [role=option] { display: block; border: 0; text-align: left; background: #fff; }
+      [hidden] { display: none; }
+    </style>
+  </head>
+  <body>
+    <h1>BOSS 直聘脱敏网申夹具</h1>
+    <div class="field">
+      <span class="label" id="boss-name-label">姓名</span>
+      <input aria-labelledby="boss-name-label" name="realName" value="已有姓名" />
+    </div>
+    <div class="field">
+      <span class="label" id="boss-position-label">期望职位</span>
+      <button type="button" role="combobox" aria-labelledby="boss-position-label" aria-haspopup="listbox" aria-expanded="false">请选择期望职位</button>
+      <div role="listbox" hidden>
+        <button type="button" role="option" data-value="产品经理">产品经理</button>
+        <button type="button" role="option" data-value="运营经理">运营经理</button>
+      </div>
+    </div>
+    <script>
+      const combo = document.querySelector('[role=combobox]');
+      const list = document.querySelector('[role=listbox]');
+      combo.addEventListener('click', () => { list.hidden = false; combo.setAttribute('aria-expanded', 'true'); });
+      list.addEventListener('click', (event) => {
+        const option = event.target.closest('[role=option]');
+        if (!option) return;
+        combo.textContent = option.textContent;
+        combo.dataset.value = option.dataset.value;
+        list.hidden = true;
+        combo.setAttribute('aria-expanded', 'false');
+        combo.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    </script>
+  </body>
+</html>

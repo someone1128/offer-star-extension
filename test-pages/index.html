@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Offer Star 测试网申表单</title>
+    <style>
+      body { max-width: 760px; margin: 40px auto; font: 16px system-ui; }
+      label { display: block; margin: 16px 0 6px; }
+      input, textarea, select { width: 100%; box-sizing: border-box; padding: 10px; }
+      .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .photo { border: 1px dashed #98a2b3; padding: 18px; }
+    </style>
+  </head>
+  <body>
+    <h1>测试网申表单</h1>
+    <p>用于验证扫描、增量填写、覆盖填写、照片待确认和中文日志。</p>
+    <div class="row">
+      <div><label for="name">姓名</label><input id="name" name="name" placeholder="请输入姓名" value="已有姓名" /></div>
+      <div><label for="phone">手机号</label><input id="phone" name="phone" placeholder="请输入手机号" /></div>
+    </div>
+    <label for="email">邮箱</label><input id="email" name="email" placeholder="请输入邮箱" />
+    <label for="city">所在城市</label><input id="city" name="city" placeholder="所在城市" />
+    <label for="targetPosition">应聘职位</label><input id="targetPosition" name="targetPosition" placeholder="应聘职位" />
+    <label for="school">毕业院校</label><input id="school" name="school" placeholder="学校" />
+    <label for="major">专业</label><input id="major" name="major" placeholder="专业" />
+    <label for="degree">学历</label>
+    <select id="degree" name="degree"><option value="">请选择学历</option><option>本科</option><option>硕士</option></select>
+    <label for="company">最近工作单位</label><input id="company" name="company" placeholder="公司" />
+    <label for="position">职位</label><input id="position" name="position" placeholder="职位" />
+    <label for="description">工作内容和个人优势</label><textarea id="description" name="description" rows="5" placeholder="工作内容、自我介绍"></textarea>
+    <label for="photo">证件照</label><div class="photo"><input id="photo" name="photo" type="file" accept="image/*" /></div>
+    <label for="attachment">上传简历附件</label><div class="photo"><input id="attachment" name="attachment" type="file" multiple accept=".pdf,.doc,.docx" /></div>
+  </body>
+</html>
