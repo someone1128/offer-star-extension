@@ -61,7 +61,7 @@ describe("招聘网站 adapter 识别", () => {
 
   it("开发计划文档同步当前站点数量和新增站点", () => {
     const configuredCount = SITE_ADAPTERS.filter((adapter) => adapter.id !== "generic").length;
-    const plan = readFileSync(new URL("../docs/DEVELOPMENT_AND_TEST_PLAN.md", import.meta.url), "utf8");
+    const plan = readFileSync(new URL("../docs/开发与验收计划.md", import.meta.url), "utf8");
     expect(plan).toContain(`当前共有 ${configuredCount} 个非 \`generic\` adapter`);
     expect(plan).toContain("汇博招聘");
   });
@@ -181,3 +181,4 @@ describe("招聘网站 adapter 识别", () => {
     expect(getSiteAdapter(url).id).toBe("public-recruitment");
   });
 });
+
