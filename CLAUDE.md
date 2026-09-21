@@ -2,7 +2,7 @@
 
 更新日期：2026-09-22
 
-这份文件只描述项目上下文、目录职责和恢复入口。可变的任务清单、阶段计划、验收记录和需要用户配合的事项统一维护在 [后续工作与交接清单](docs/NEXT_WORK.md)，不要把临时任务继续堆到本文件。
+这份文件只描述项目上下文、目录职责和恢复入口。可变的任务清单、阶段计划、验收记录和需要用户配合的事项统一维护在 [后续工作与交接清单](docs/后续工作与交接清单.md)，不要把临时任务继续堆到本文件。
 
 仓库地址：<https://github.com/someone1128/offer-star-extension>
 
@@ -40,7 +40,7 @@ npm ci
 npm run verify
 ```
 
-然后阅读 [后续工作与交接清单](docs/NEXT_WORK.md)，按其中的 P0 顺序继续。需要真实招聘网站登录、验证码或安全验证时，由用户本人完成；代理只进行授权范围内的页面检查和填写。
+然后阅读 [后续工作与交接清单](docs/后续工作与交接清单.md)，按其中的 P0 顺序继续。需要真实招聘网站登录、验证码或安全验证时，由用户本人完成；代理只进行授权范围内的页面检查和填写。
 
 ## 常用命令
 
@@ -67,3 +67,4 @@ npm run test:e2e:extension
 ## Git 约定
 
 远程是 `origin https://github.com/someone1128/offer-star-extension.git`。开发前执行 `git status --short`，提交前执行 `git diff --cached` 和 `npm run verify`。提交信息使用 `feat(scope):`、`fix(scope):` 或 `test(scope):`。真实简历、账号信息、API Key 和 `.env*` 不得提交。
+
