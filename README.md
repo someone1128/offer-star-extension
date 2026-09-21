@@ -1,6 +1,6 @@
 # Offer Star 浏览器插件
 
-开发阶段的阶段规划、交互基线、站点适配规则和测试完成标准见 [开发与验收计划](docs/DEVELOPMENT_AND_TEST_PLAN.md)；真实站点的公开入口和回归状态见 [真实站点回归矩阵](docs/SITE_REGRESSION_MATRIX.md)，需要用户登录的页面见 [真实回归登录清单](docs/LOGIN_REQUIRED_SITE_CHECKLIST.md)。
+开发阶段的阶段规划、交互基线、站点适配规则和测试完成标准见 [开发与验收计划](docs/DEVELOPMENT_AND_TEST_PLAN.md)；真实站点的公开入口和回归状态见 [真实站点回归矩阵](docs/SITE_REGRESSION_MATRIX.md)，需要用户登录的页面见 [真实回归登录清单](docs/LOGIN_REQUIRED_SITE_CHECKLIST.md)。换电脑后先阅读 [AGENTS.md](AGENTS.md) 和 [CLAUDE.md](CLAUDE.md)，其中包含项目边界、当前进度、已知限制、恢复步骤和后续工作清单。
 
 Offer Star 简历助手使用 WXT、React 和 TypeScript 构建，面向 Chrome、Edge 和 Firefox。插件的目标是扫描招聘网站申请表单，优先使用通用 HTML 规则识别字段，只有遇到异步下拉、动态经历、附件路由或分步骤页面时才使用站点专用策略。
 
